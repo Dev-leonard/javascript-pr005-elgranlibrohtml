@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title> Este texto es el título del documento</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="misestilos.css"> <!--relacion de html con css-->
+
+    <meta name="description" content="Este es un documento HTML5">  
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <link rel="stylesheet" href="misestilos.css">
+    <link rel="icon"  href ="power.png" type="image/png" sizes="16x16">
+
+</head>
+
+<body>
+    <section>
+            <form name="formulario" method="get" action="procesar.php">
+                           
+                <p><input type="text" name="nombre"></p>
+                <p><input type="text" name="edad" value="35"</p>
+                <p><input type="submit" value="Enviar Datos"></p>
+
+                
+                <p>
+                    <label>Nombre:<input type="text" name="nombre"></label>
+                    
+                </p>
+ 
+                <p>
+                    <label>Edad:<input type="text" name="edad"></label>
+                </p>
+
+
+
+
+
+
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                    
+                </p>
+ 
+                <p>
+                    <label for="edad">Edad:</label>
+                    <input type="text" name="edad" id="edad">
+                </p>
+
+
+
+                <p>
+                    <label>Nombre:<input type="text" name="nombre" maxlength="20"></label>
+                </p>
+
+                <p><label>Edad: <input type="number" name="edad" min="13" max="100"></label></p>
+                <p><label>Correo: <input type="email" name="correo"></label></p>
+                <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+                <p><label>Sitio Web: <input type="url" name="sitioweb"></label></p>
+
+                <p><label>Edad: <input type="range" name="edad" min="13" max="100" value="35"></label></p>
+
+                <p><label>Nombre:<input type="text" name="nombre" maxlength="25"></label></p>
+                <p><label><input type="radio" name="edad" value="15" checked>15 Años</label></p>
+                <p><label><input type="radio" name="edad" value="30" >30 Años</label></p>
+                <p><label><input type="radio" name="edad" value="45" >45 Años</label></p>
+                <p><label><input type="radio" name="edad" value="60" >60 Años</label></p>
+                <p><input type="submit" value="Enviar"></></p>
+
+
+                <p><label>Nombre:<input type="text" name="nombre" maxlength="25"></label></p>
+                <p><label><input type="checkbox" name="edad15" value="15" checked>15 Años</label></p>
+                <p><label><input type="checkbox" name="edad30" value="30" checked>30 Años</label></p>
+                <p><label><input type="checkbox" name="edad45" value="45" >45 Años</label></p>
+                <p><label><input type="checkbox" name="edad60" value="60" >60 Años</label></p>
+                <p><input type="submit" value="Enviar"></p>
+
+                <p><input type="date" name="fecha" value="2017-02-05"></p>
+
+
+
+                <p><input type="color" name="micolor" value="#99BB00"></p>
+
+
+                <p><input type="image" src="botonboton.png" width="150"></p>
+
+
+                <p><button type="submit">Enviar formulario</button></p>
+
+
+                <p><label>Texto: <textarea name="texto" cols="50" rows="6"></textarea></label></p>
+
+
+                <p>
+                    
+                    <label for="listado">libros: </label>
+                    <select name="libro" id="listado">
+                        <option value="1">IT</option>
+                        <option value="2">Carrie</option>
+                        <option value="3">El resplandor</option>
+                        <option value="4">Misery</option>
+                    </select>
+                
+                </p>
+
+
+
+
+                <p>                    
+                    <datalist id="datos">                   
+                        <option value="123123123" label="telefono 1">
+                        <option value="456456456" label="telefono 2">                                         
+                    </datalist>
+                </p>
+
+                <p><label>telefono: <input type="tel" name="telefono" list="datos"</label></p>
+                
+
+                <p>                    
+                    <progress value="10" max="100">0%</progress>
+                </p>
+
+
+                <p>                    
+                    <meter value="60" min="20" max="100" low="40" high="80" optimum="100">60%</meter>
+                </p>
+
+
+            </form>
+
+            <form name="formulario" method="get" action="procesar.php">
+                <p><input type="text" name="val"></p>
+                <p><input type="submit" value="Enviar"></p>
+            </form>
+
+
+
+
+            <p>                    
+                <?php print('El valor es: ' .$_GET['val']); ?>
+            </p> 
+
+
+            <form name="formulario" method="get" action="procesar.php">
+                <p><label>Buscar: <input type="search" name="buscar" placeholder="<Término a buscar"></label></p>
+                <p><input type="submit" value="Buscar"></p>
+            </form>
+
+            <p> 
+                <input type="submit" value="Enviar">                   
+                <input type="submit" value="Grabar" formnovalidate>                   
+                
+            </p> 
+
+
+            <p><label>Correo: <input type="email" name="correo" requiered"></label></p>
+
+            <p><label>Código Postal: <input pattern="[0-9]{5}" name="cp" title="Inserte su código postal"></label></p>           
+
+            <p><label>Buscar: <input type="search" name="buscar" autocomplete="off"></label></p> 
+            
+            <p><label>Edad: <input type="text" name="edad" autofocus></label></p>
+
+            <p><label>Texto: <textarea name="texto" cols="50" rows="6" spellcheck="false"></textarea></label></p> 
+                
+        
+        </section>
+
+<!--UN FRACASO ES DE AQUELLO QUE NO APRENDEMOS NADA-->
+
+        <nav>
+        <p><input type="search" name="buscar" form="formulario"></p>
+        </nav>
+ 
+    
+    <header id="titulo">
+        Este es LIBRO
+    </header>
+
+
+
+
+    <header>
+        <h1> Este es el titulo </h1>
+        <time datetime="2020-10-12" pubdate>publicado 12-10-2020</time>
+
+    </header>
+
+
+
+
+
+
+    <nav>
+        Principal | Fotos | Videos | Contacto
+    </nav>
+
+    <nav>
+        <a href="index.html">Principal</a>
+        <a href="fotod.html">Fotos</a>
+        <a href="videos.html">videos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+
+
+    <main>
+       
+       <section id="noticias">
+           ARTICULOS LARGOS
+       </section>
+       <section id="noticiaslocales">
+           ARTICULOS CORTOS
+       </section>
+       
+       
+
+
+
+       <section>
+            <div class="libros"> Libro: IT, Stephen king</div>
+            <div class="libros"> Libro: Carrie, Stephen king</div>
+            <div class="libros"> Libro: El resplandor, Stephen king</div>
+            <div class="libros"> Libro: misery, Stephen king</div>
+            
+       </section>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <section>
+            <article>
+                Este es el texto de mi primer artículo
+                <pre>
+                La muerte es una quimera: porque mientras yo existo, no existe
+                la muerte;
+                y cuando existe la muerte, ya no exito yo.
+                Epicuro de Samos
+                </pre>
+
+
+                <pre>
+                    <p>La muerte es una quimera: porque mientras yo existo, no existe la muerte;<br>y cuando existe la muerte, ya no exito yo.<br>Epicuro de Samos</p>
+                </pre>
+
+            </article>
+
+            <article>
+
+                <p>La muerte es una <em>quimera</em>: porque mientras yo <u>existo</u>, no existe
+                la <i>muerte</i>; <br>y cuando existe la <i>muerte</i>, <strong>ya no exito yo</strong>.<br>Epicuro de Samos</p>
+
+            </article>
+
+
+
+
+
+            <article>
+                Este es el texto de mi segundo artículo
+            </article> 
+           
+
+            <article>
+                <header>
+                    <h1> LOS OSITOS PANDA </h1>
+                    <time datetime="2020-10-01" pubdate>publicado 01-10-2020</time>
+                </header>
+
+                <p>La muerte es una quimera: porque mientras yo <mark>existo</mark>, no existe
+                    la muerte; <br>y cuando existe la muerte, ya no exito yo.<br><cite>Epicuro de Samos</cite></p>
+                    
+                <img src="foto.jpg">
+            </article>
+
+            <article>
+            <figure>
+                
+                <img src="foto.jpg" width="150" alt="Arboles en mi patio">    
+                <figcaption>Arboles en mi patio</figcaption>
+            
+            </figure>
+            </article>
+
+
+
+            <article>
+                <pre>
+                    <code>
+                        function cambiarColor(){
+                            document.body.style.backgroundColor = "#0000FF";
+                        }
+                        document.addEventlistener("click",cambiarColor);
+                    </code>
+                </pre>
+            </article>
+            <!-- Este es un comentario-->
+
+
+
+            <article>
+
+
+
+                <table>
+
+                    <tr>
+                        <th colspan="2">Libro</th>
+                        <th>Año</th>
+
+                    </tr>
+
+
+
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Año</th>
+                    </tr>
+
+                    <tr>
+                        <td>IT</td>
+                        <td>Stephen king</td>
+                        <td>1986</td>
+                    </tr>
+
+                    <tr>
+                        <td>Carrie</td>
+                        <td>Stephen king</td>
+                        <td>1974</td>
+                    </tr>
+
+                    <tr>
+                        <td>El resplandor</td>
+                        <td>Stephen king</td>
+                        <td>1977</td>
+                    </tr>
+
+                </table>
+
+
+
+            </article>
+
+
+
+        </section>
+
+        <section>
+            <p>Artículo 1</p>
+            <p>Artículo 2</p>
+            <p>Artículo 3</p>
+            <p>Artículo 4</p>
+            <p><a href="#titulo">Volver</a></p>
+
+        </section>
+
+
+
+
+
+        <aside>
+            <p>Cita del articulo 1</p>
+            <p>Cita del articulo 2</p>
+            
+        </aside>
+
+        <aside>
+            <p>My favorite movie is <span translate="no">Two Roads</span></p>
+            <p>My pelicula favorita es <span contenteditable>Casablanca</span></p>
+        
+        </aside>
+
+
+
+        <aside>
+            <ul>
+               <li>IT, Stephen King</li> 
+               <li>Carrie, Stephen King</li> 
+               <li>El resplandor, Stephen King</li> 
+               <li>Misery, Stephen King</li> 
+
+            </ul>
+
+            <ol>
+                <li>IT, Stephen King</li> 
+                <li>Carrie, Stephen King</li> 
+                <li>El resplandor, Stephen King</li> 
+                <li>Misery, Stephen King</li> 
+
+            </ol>
+
+            <ol type="A">
+                <li>IT, Stephen King</li> 
+                <li>Carrie, Stephen King</li> 
+                <li>El resplandor, Stephen King</li> 
+                <li>Misery, Stephen King</li> 
+
+            </ol>
+
+            <ol type="A" reversed>
+                <li>IT, Stephen King</li> 
+                <li>Carrie, Stephen King</li> 
+                <li>El resplandor, Stephen King</li> 
+                <li>Misery, Stephen King</li> 
+
+            </ol>
+
+
+            <dl>
+                <dt>IT</dt>
+                    <dd>Tras lustros de tranquilidad y lejania una antigua promesa
+                    infantil les hace volver al lugar en el que vivieron su infancia ya
+                    juventud como una terrible pesadilla.</dd>
+                    
+                <dt>Carrie</dt>
+                    <dd>Sus compañeros se burlan de ella, pero Carrie tiene un don.
+                        puede mover cosas con su mente. Este es su poder y su gran problema.</dd>
+
+            </dl>
+
+
+
+            <blockquote>IT</blockquote>
+            <blockquote>Carrie</blockquote>
+            <blockquote>El resplandor</blockquote>
+            <blockquote>Misery</blockquote>
+
+
+            <details>
+                <summary>My Books</summary>
+                <p>IT</p>
+                <p>Carrie</p>
+                <p>El resplandor</p>
+                <p>Misery</p>
+
+            </details>
+
+
+        </aside>
+
+
+    </main>
+    <footer>
+        &copy; Derechos reservados  2020
+    </footer>
+
+    <footer>
+       <address>Toronto, canada</address>
+       <small>&copy; 2020 <a href="http://ww.jdgauchat.com" target="_blank">J.D Gauchat</a></small>
+       <small>&copy; 2015 <a href="mailto:info@jdgauchat.com">J.D Gauchat(enviar correo)</a></small>
+    </footer>
+    <footer>
+        <a href="http://www.formasterminds.com/content/miarchivo.pdf" 
+        ping="http:formasterminds.com/control.php" download>Click aquí para descargar</a>
+
+    </footer>
+
+
+
+</body>
+</html>
+
+
+
